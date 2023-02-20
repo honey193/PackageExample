@@ -11,6 +11,7 @@
 		931F57F629A34A1B00BD9CDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F57F529A34A1B00BD9CDB /* ContentView.swift */; };
 		931F57F829A34A1D00BD9CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931F57F729A34A1D00BD9CDB /* Assets.xcassets */; };
 		931F57FC29A34A1D00BD9CDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931F57FB29A34A1D00BD9CDB /* Preview Assets.xcassets */; };
+		931F580429A34D5600BD9CDB /* TestPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 931F580329A34D5600BD9CDB /* TestPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931F580429A34D5600BD9CDB /* TestPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = PackageExample;
+			packageProductDependencies = (
+				931F580329A34D5600BD9CDB /* TestPackage */,
+			);
 			productName = PackageExample;
 			productReference = 931F57F029A34A1B00BD9CDB /* PackageExample.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 931F57E729A34A1B00BD9CDB;
+			packageReferences = (
+				931F580229A34D5600BD9CDB /* XCRemoteSwiftPackageReference "TestPackage" */,
+			);
 			productRefGroup = 931F57F129A34A1B00BD9CDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		931F580229A34D5600BD9CDB /* XCRemoteSwiftPackageReference "TestPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/honey193/TestPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		931F580329A34D5600BD9CDB /* TestPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 931F580229A34D5600BD9CDB /* XCRemoteSwiftPackageReference "TestPackage" */;
+			productName = TestPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 931F57E829A34A1B00BD9CDB /* Project object */;
 }

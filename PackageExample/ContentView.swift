@@ -6,21 +6,29 @@
 //
 
 import SwiftUI
+import TestPackage
 
 struct ContentView: View {
+    @State var showAlert: Bool = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                showAlert = true
+            } label: {
+                Text("Click Me...!")
+                    .foregroundColor(.black)
+                    .padding(.horizontal, 8)
+            }
+            .buttonStyle(.bordered)
+            .tint(.cyan)
+            .buttonBorderShape(.roundedRectangle(radius: 8))
         }
         .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        
+        if showAlert {
+            SwiftUIView(alertMessage: "This is from Swift Package!!!", buttonText: "Ok") {
+                showAlert = false
+            }
+        }
     }
 }

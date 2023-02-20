@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "testpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/honey193/TestPackage",
+      "state" : {
+        "branch" : "main",
+        "revision" : "50f09b746d1b366827cbad5885c19b46868d9ae9"
+      }
+    }
+  ],
+  "version" : 2
+}
